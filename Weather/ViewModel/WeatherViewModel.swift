@@ -11,6 +11,8 @@ import Foundation
 
 class WeatherViewModel {
     private var forecastResponse: ForecastResponse?
+    private(set) var latitude: Double = 0
+    private(set) var longitude: Double = 0
     private(set) var forecast = [String: String]() {
         didSet {
             reloadForecastDataClosure?()
@@ -28,16 +30,28 @@ class WeatherViewModel {
     }
     
     var networkManager: DarkskyAPINetworkProtocol = DarkskyAPINetworkManager(environment: .production)
-    
+    private var locationManager = LocationManager()
     
     var reloadForecastDataClosure: (()->())?
     var showLoadingViewClosure: ((Bool)->())?
     var updateStatusViewClosure: ((String?)->())?
 
+    
+    func startWeatherForecasting() {
+        initLocationManager()
+        locationManager.requestLocation()
+    }
 }
 
 //MARK:- getForecast related
 extension WeatherViewModel {
+    func userRequestForecast(latitude: String, longitude: String) {
+        guard let latitude = Double(latitude), let longitude = Double(longitude) else {
+            status = "weather_input_location_invalid"
+            return
+        }
+        getForecast(latitude: latitude, longitude: longitude)
+    }
     func getForecast(latitude: Double, longitude: Double) {
         guard isLoading == false else {
             return
@@ -53,6 +67,7 @@ extension WeatherViewModel {
                 self.status = error
                 return
             }
+            self.status = nil
             guard let forecastResponse = forecastResponse else {
                 return
             }
@@ -63,6 +78,9 @@ extension WeatherViewModel {
     
     private func processForecastResponse(_ forecastResponse: ForecastResponse) {
         self.forecastResponse = forecastResponse
+        latitude = forecastResponse.latitude
+        longitude = forecastResponse.longitude
+        
         let forecast = forecastResponse.currently
         var details = [String: String]()
         details[ForecastFields.timezone.rawValue] = forecastResponse.timezone
@@ -84,6 +102,7 @@ extension WeatherViewModel {
         details[ForecastFields.visibility.rawValue] = stringValue(forecast.visibility)
         details[ForecastFields.ozone.rawValue] = stringValue(forecast.ozone)
         
+        self.forecast = details
     }
     
     private func stringValue(_ float: Float?) -> String? {
@@ -97,8 +116,25 @@ extension WeatherViewModel {
 }
 
 
+//MARK: - locationManager related
+extension WeatherViewModel {
+    private func initLocationManager() {
+        locationManager.locationUpdateClosure = { [weak self] (location, placemark) in
+            guard let self = self else {
+                return
+            }
+            if let location = location {
+                print("Location: \(location.coordinate.latitude) - \(location.coordinate.longitude)")
+                self.getForecast(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            } else {
+                // cannot get user location
+            }
+        }
+    }
+}
 
-/** enum for iterating the fields of user data. */
+
+/** enum for iterating the fields of forecast data. */
 enum ForecastFields: String, CaseIterable {
     case timezone = "Timezone"
     case time = "Time"

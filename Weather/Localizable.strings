@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  Weather
+
+  Created by Christian on 21/04/19.
+  Copyright © 2019 Christian. All rights reserved.
+*/
+
+
+"network_loading" = "Loading...";
+"network_authentication_error" = "You need to be authenticated first.";
+"network_bad_request" = "Bad request";
+"network_outdated" = "The url you requested is outdated.";
+"network_failed" = "Network request failed.";
+"network_no_data" = "Response returned with no data to decode.";
+"network_unable_to_decode" = "We could not decode the response.";
+"network_no_response_object" = "No object return in the response.";
+"no_network_connection" = "Please check your internet connection!";
+
+"weather_input_location_invalid" = "Invalid input for location.";

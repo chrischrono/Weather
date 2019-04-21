@@ -26,6 +26,9 @@
 		FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F509226C8CD600264CBC /* EndPointType.swift */; };
 		FA10F515226C8F8A00264CBC /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F514226C8F8A00264CBC /* WeatherViewModel.swift */; };
 		FADE0BDD226CA0D200C1CF5E /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */; };
+		FADE0BE0226CA9C300C1CF5E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BDF226CA9C300C1CF5E /* StringExtension.swift */; };
+		FADE0BE2226CAE8B00C1CF5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BE1226CAE8B00C1CF5E /* LocationManager.swift */; };
+		FADE0BE4226CB39600C1CF5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FADE0BE3226CB39600C1CF5E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		FA10F509226C8CD600264CBC /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		FA10F514226C8F8A00264CBC /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
 		FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		FADE0BDF226CA9C300C1CF5E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		FADE0BE1226CAE8B00C1CF5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FADE0BE3226CB39600C1CF5E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,7 @@
 				FA10F4DB226C7C5500264CBC /* Assets.xcassets */,
 				FA10F4DD226C7C5500264CBC /* LaunchScreen.storyboard */,
 				FA10F4E0226C7C5500264CBC /* Info.plist */,
+				FADE0BE3226CB39600C1CF5E /* Localizable.strings */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				FA10F4FB226C8CD600264CBC /* Networking */,
+				FADE0BE1226CAE8B00C1CF5E /* LocationManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -210,9 +218,18 @@
 		FADE0BDB226CA0C200C1CF5E /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				FADE0BDE226CA98500C1CF5E /* Extension */,
 				FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FADE0BDE226CA98500C1CF5E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FADE0BDF226CA9C300C1CF5E /* StringExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA10F4DF226C7C5500264CBC /* LaunchScreen.storyboard in Resources */,
+				FADE0BE4226CB39600C1CF5E /* Localizable.strings in Resources */,
 				FA10F4DC226C7C5500264CBC /* Assets.xcassets in Resources */,
 				FA10F4DA226C7C5400264CBC /* Main.storyboard in Resources */,
 			);
@@ -317,9 +335,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA10F512226C8CD600264CBC /* NetworkLogger.swift in Sources */,
+				FADE0BE2226CAE8B00C1CF5E /* LocationManager.swift in Sources */,
 				FA10F511226C8CD600264CBC /* Router.swift in Sources */,
 				FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */,
 				FA10F515226C8F8A00264CBC /* WeatherViewModel.swift in Sources */,
+				FADE0BE0226CA9C300C1CF5E /* StringExtension.swift in Sources */,
 				FA10F4D7226C7C5400264CBC /* WeatherViewController.swift in Sources */,
 				FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */,
 				FA10F50C226C8CD600264CBC /* JSONParameterEncoder.swift in Sources */,
