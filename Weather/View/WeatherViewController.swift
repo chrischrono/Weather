@@ -9,6 +9,13 @@
 import UIKit
 
 class WeatherViewController: UIViewController {
+    
+    @IBOutlet private var latitudeTextField: UITextField!
+    @IBOutlet private var longitudeTextField: UITextField!
+    @IBOutlet private var forecastButton: UIButton!
+    @IBOutlet private var forecastTextView: UITextView!
+    @IBOutlet private var statusLabel: UILabel!
+    @IBOutlet private var loadingView: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
