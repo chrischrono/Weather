@@ -29,6 +29,11 @@
 		FADE0BE0226CA9C300C1CF5E /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BDF226CA9C300C1CF5E /* StringExtension.swift */; };
 		FADE0BE2226CAE8B00C1CF5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BE1226CAE8B00C1CF5E /* LocationManager.swift */; };
 		FADE0BE4226CB39600C1CF5E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FADE0BE3226CB39600C1CF5E /* Localizable.strings */; };
+		FAFF8541226D14A800C0BF8A /* forecast.json in Resources */ = {isa = PBXBuildFile; fileRef = FAFF8540226D14A800C0BF8A /* forecast.json */; };
+		FAFF8543226D151300C0BF8A /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8542226D151300C0BF8A /* XCTestCase.swift */; };
+		FAFF8545226D153E00C0BF8A /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8544226D153E00C0BF8A /* MockNetworkManager.swift */; };
+		FAFF8547226D176800C0BF8A /* DateConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8546226D176800C0BF8A /* DateConverterTests.swift */; };
+		FAFF8549226D1A3800C0BF8A /* WeatherViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFF8548226D1A3800C0BF8A /* WeatherViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		FADE0BDF226CA9C300C1CF5E /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		FADE0BE1226CAE8B00C1CF5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FADE0BE3226CB39600C1CF5E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FAFF8540226D14A800C0BF8A /* forecast.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = forecast.json; sourceTree = "<group>"; };
+		FAFF8542226D151300C0BF8A /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		FAFF8544226D153E00C0BF8A /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		FAFF8546226D176800C0BF8A /* DateConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverterTests.swift; sourceTree = "<group>"; };
+		FAFF8548226D1A3800C0BF8A /* WeatherViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,8 +137,13 @@
 		FA10F4E8226C7C5500264CBC /* WeatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				FAFF853F226D145900C0BF8A /* Resource */,
+				FAFF853E226D145200C0BF8A /* Extension */,
+				FAFF853D226D144D00C0BF8A /* MockService */,
 				FA10F4E9226C7C5500264CBC /* WeatherTests.swift */,
 				FA10F4EB226C7C5500264CBC /* Info.plist */,
+				FAFF8546226D176800C0BF8A /* DateConverterTests.swift */,
+				FAFF8548226D1A3800C0BF8A /* WeatherViewModelTests.swift */,
 			);
 			path = WeatherTests;
 			sourceTree = "<group>";
@@ -232,6 +247,30 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FAFF853D226D144D00C0BF8A /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8544226D153E00C0BF8A /* MockNetworkManager.swift */,
+			);
+			path = MockService;
+			sourceTree = "<group>";
+		};
+		FAFF853E226D145200C0BF8A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8542226D151300C0BF8A /* XCTestCase.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FAFF853F226D145900C0BF8A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				FAFF8540226D14A800C0BF8A /* forecast.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFF8541226D14A800C0BF8A /* forecast.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFF8547226D176800C0BF8A /* DateConverterTests.swift in Sources */,
+				FAFF8545226D153E00C0BF8A /* MockNetworkManager.swift in Sources */,
+				FAFF8543226D151300C0BF8A /* XCTestCase.swift in Sources */,
 				FA10F4EA226C7C5500264CBC /* WeatherTests.swift in Sources */,
+				FAFF8549226D1A3800C0BF8A /* WeatherViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
