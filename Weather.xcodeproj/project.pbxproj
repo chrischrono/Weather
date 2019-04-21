@@ -24,6 +24,8 @@
 		FA10F511226C8CD600264CBC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F507226C8CD600264CBC /* Router.swift */; };
 		FA10F512226C8CD600264CBC /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F508226C8CD600264CBC /* NetworkLogger.swift */; };
 		FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F509226C8CD600264CBC /* EndPointType.swift */; };
+		FA10F515226C8F8A00264CBC /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F514226C8F8A00264CBC /* WeatherViewModel.swift */; };
+		FADE0BDD226CA0D200C1CF5E /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		FA10F507226C8CD600264CBC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FA10F508226C8CD600264CBC /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		FA10F509226C8CD600264CBC /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		FA10F514226C8F8A00264CBC /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		FA10F4D3226C7C5400264CBC /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				FADE0BDB226CA0C200C1CF5E /* Helper */,
 				FA10F4F9226C8C9700264CBC /* Service */,
 				FA10F4F6226C7C7700264CBC /* Model */,
 				FA10F4F5226C7C7500264CBC /* View */,
@@ -124,6 +129,7 @@
 		FA10F4F4226C7C6E00264CBC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FA10F514226C8F8A00264CBC /* WeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -199,6 +205,14 @@
 				FA10F509226C8CD600264CBC /* EndPointType.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		FADE0BDB226CA0C200C1CF5E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FADE0BDC226CA0D200C1CF5E /* DateConverter.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +319,7 @@
 				FA10F512226C8CD600264CBC /* NetworkLogger.swift in Sources */,
 				FA10F511226C8CD600264CBC /* Router.swift in Sources */,
 				FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */,
+				FA10F515226C8F8A00264CBC /* WeatherViewModel.swift in Sources */,
 				FA10F4D7226C7C5400264CBC /* WeatherViewController.swift in Sources */,
 				FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */,
 				FA10F50C226C8CD600264CBC /* JSONParameterEncoder.swift in Sources */,
@@ -315,6 +330,7 @@
 				FA10F4D5226C7C5400264CBC /* AppDelegate.swift in Sources */,
 				FA10F510226C8CD600264CBC /* HTTPMethod.swift in Sources */,
 				FA10F50B226C8CD600264CBC /* URLParameterEncoding.swift in Sources */,
+				FADE0BDD226CA0D200C1CF5E /* DateConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

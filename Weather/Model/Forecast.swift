@@ -17,7 +17,7 @@ struct ForecastResponse: Codable {
 
 
 struct Forecast: Codable {
-    let time: Int
+    let time: Double
     let summary: String?
     let icon: String?
     let precipIntensity: Float?
