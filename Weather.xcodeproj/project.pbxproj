@@ -14,6 +14,16 @@
 		FA10F4DF226C7C5500264CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10F4DD226C7C5500264CBC /* LaunchScreen.storyboard */; };
 		FA10F4EA226C7C5500264CBC /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4E9226C7C5500264CBC /* WeatherTests.swift */; };
 		FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4F7226C86D900264CBC /* Forecast.swift */; };
+		FA10F50A226C8CD600264CBC /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4FD226C8CD600264CBC /* ParameterEncoding.swift */; };
+		FA10F50B226C8CD600264CBC /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4FE226C8CD600264CBC /* URLParameterEncoding.swift */; };
+		FA10F50C226C8CD600264CBC /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4FF226C8CD600264CBC /* JSONParameterEncoder.swift */; };
+		FA10F50D226C8CD600264CBC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F501226C8CD600264CBC /* NetworkManager.swift */; };
+		FA10F50E226C8CD600264CBC /* DarkskyAPIEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F503226C8CD600264CBC /* DarkskyAPIEndPoint.swift */; };
+		FA10F50F226C8CD600264CBC /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F505226C8CD600264CBC /* HTTPTask.swift */; };
+		FA10F510226C8CD600264CBC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F506226C8CD600264CBC /* HTTPMethod.swift */; };
+		FA10F511226C8CD600264CBC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F507226C8CD600264CBC /* Router.swift */; };
+		FA10F512226C8CD600264CBC /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F508226C8CD600264CBC /* NetworkLogger.swift */; };
+		FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F509226C8CD600264CBC /* EndPointType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,16 @@
 		FA10F4E9226C7C5500264CBC /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		FA10F4EB226C7C5500264CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA10F4F7226C86D900264CBC /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		FA10F4FD226C8CD600264CBC /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		FA10F4FE226C8CD600264CBC /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		FA10F4FF226C8CD600264CBC /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		FA10F501226C8CD600264CBC /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FA10F503226C8CD600264CBC /* DarkskyAPIEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DarkskyAPIEndPoint.swift; sourceTree = "<group>"; };
+		FA10F505226C8CD600264CBC /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		FA10F506226C8CD600264CBC /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		FA10F507226C8CD600264CBC /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FA10F508226C8CD600264CBC /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		FA10F509226C8CD600264CBC /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +99,7 @@
 		FA10F4D3226C7C5400264CBC /* Weather */ = {
 			isa = PBXGroup;
 			children = (
+				FA10F4F9226C8C9700264CBC /* Service */,
 				FA10F4F6226C7C7700264CBC /* Model */,
 				FA10F4F5226C7C7500264CBC /* View */,
 				FA10F4F4226C7C6E00264CBC /* ViewModel */,
@@ -121,6 +142,63 @@
 				FA10F4F7226C86D900264CBC /* Forecast.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FA10F4F9226C8C9700264CBC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F4FB226C8CD600264CBC /* Networking */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FA10F4FB226C8CD600264CBC /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F4FC226C8CD600264CBC /* Encoding */,
+				FA10F500226C8CD600264CBC /* Manager */,
+				FA10F502226C8CD600264CBC /* EndPoint */,
+				FA10F504226C8CD600264CBC /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FA10F4FC226C8CD600264CBC /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F4FD226C8CD600264CBC /* ParameterEncoding.swift */,
+				FA10F4FE226C8CD600264CBC /* URLParameterEncoding.swift */,
+				FA10F4FF226C8CD600264CBC /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		FA10F500226C8CD600264CBC /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F501226C8CD600264CBC /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FA10F502226C8CD600264CBC /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F503226C8CD600264CBC /* DarkskyAPIEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		FA10F504226C8CD600264CBC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FA10F505226C8CD600264CBC /* HTTPTask.swift */,
+				FA10F506226C8CD600264CBC /* HTTPMethod.swift */,
+				FA10F507226C8CD600264CBC /* Router.swift */,
+				FA10F508226C8CD600264CBC /* NetworkLogger.swift */,
+				FA10F509226C8CD600264CBC /* EndPointType.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +302,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA10F512226C8CD600264CBC /* NetworkLogger.swift in Sources */,
+				FA10F511226C8CD600264CBC /* Router.swift in Sources */,
+				FA10F513226C8CD600264CBC /* EndPointType.swift in Sources */,
 				FA10F4D7226C7C5400264CBC /* WeatherViewController.swift in Sources */,
 				FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */,
+				FA10F50C226C8CD600264CBC /* JSONParameterEncoder.swift in Sources */,
+				FA10F50F226C8CD600264CBC /* HTTPTask.swift in Sources */,
+				FA10F50D226C8CD600264CBC /* NetworkManager.swift in Sources */,
+				FA10F50A226C8CD600264CBC /* ParameterEncoding.swift in Sources */,
+				FA10F50E226C8CD600264CBC /* DarkskyAPIEndPoint.swift in Sources */,
 				FA10F4D5226C7C5400264CBC /* AppDelegate.swift in Sources */,
+				FA10F510226C8CD600264CBC /* HTTPMethod.swift in Sources */,
+				FA10F50B226C8CD600264CBC /* URLParameterEncoding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
