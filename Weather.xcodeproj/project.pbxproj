@@ -13,6 +13,7 @@
 		FA10F4DC226C7C5500264CBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA10F4DB226C7C5500264CBC /* Assets.xcassets */; };
 		FA10F4DF226C7C5500264CBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA10F4DD226C7C5500264CBC /* LaunchScreen.storyboard */; };
 		FA10F4EA226C7C5500264CBC /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4E9226C7C5500264CBC /* WeatherTests.swift */; };
+		FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA10F4F7226C86D900264CBC /* Forecast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		FA10F4E5226C7C5500264CBC /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA10F4E9226C7C5500264CBC /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		FA10F4EB226C7C5500264CBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA10F4F7226C86D900264CBC /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		FA10F4F6226C7C7700264CBC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA10F4F7226C86D900264CBC /* Forecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA10F4D7226C7C5400264CBC /* WeatherViewController.swift in Sources */,
+				FA10F4F8226C86D900264CBC /* Forecast.swift in Sources */,
 				FA10F4D5226C7C5400264CBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
